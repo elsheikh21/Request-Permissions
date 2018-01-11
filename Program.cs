@@ -22,7 +22,7 @@ using Outlook = Microsoft.Office.Interop.Outlook;
 using System.Net.NetworkInformation;
 
 namespace Request {
-    protected class Program {
+    static class Program {
 
         static void Main(string[] args) {
             sendEmail();
@@ -88,7 +88,7 @@ namespace Request {
 
         #region get server time
         public static string getTime() {
-            return DateTime.Now.ToString();
+            return DateTime.Now.ToLowerInvariant();
         }
         #endregion 
 
